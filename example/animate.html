@@ -12,8 +12,10 @@
             var en = $.en($('canvas')[0]);
             var small_en = $.en($('canvas')[0], { radius : 10 });
             $('body').append('<p><button id="animate">animate</button></p>');
+            $('body').append('<p><div id="log" /></p>');
             $('#animate').click(function(e){
                 en.animate(100, 100, 3000);
+                small_en.animate(100, 100, 5000, function(){ $('#log').text('finished'); });
             });
         }); 
     //-->
