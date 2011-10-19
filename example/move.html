@@ -10,7 +10,9 @@
         $(function(){
             $('body').append('<canvas id="canvas" width="200" height="200" />');
             var en = $.en($('canvas')[0]);
-            $('#canvas').click(function(e){
+            var small_en = $.en($('canvas')[0], { radius : 10 });
+            $('body').append('<p><button id="move">move</button></p>');
+            $('#move').click(function(e){
                 en.move(100, 100);
             });
         }); 
