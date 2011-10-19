@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>en / example / move</title>
+    <title>en / example / animate</title>
     <script type='text/javascript' src='../lib/jquery-1.6.2.min.js'></script>
     <script type='text/javascript' src='../lib/en.js'></script>
     <script type='text/javascript'>
@@ -11,9 +11,9 @@
             $('body').append('<canvas id="canvas" width="200" height="200" />');
             var en = $.en($('canvas')[0]);
             var small_en = $.en($('canvas')[0], { radius : 10 });
-            $('body').append('<p><button id="move">move</button></p>');
-            $('#move').click(function(e){
-                en.move(100, 100);
+            $('body').append('<p><button id="animate">animate</button></p>');
+            $('#animate').click(function(e){
+                en.animate(100, 100, 3000);
             });
         }); 
     //-->
