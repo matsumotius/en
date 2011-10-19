@@ -9,8 +9,8 @@
     <!--
         $(function(){
             $('body').append('<canvas id="canvas" width="200" height="200" />');
-            var en = $.en($('canvas')[0]);
-            var small_en = $.en($('canvas')[0], { radius : 10 });
+            var en = $.en($('canvas')[0], { type : 'stroke' });
+            var small_en = $.en($('canvas')[0], { radius : 10, type : 'stroke' });
             $('body').append('<p><button id="animate">animate</button></p>');
             $('body').append('<p><div id="log" /></p>');
             $('#animate').click(function(e){
