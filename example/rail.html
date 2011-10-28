@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>en / example / rail</title>
+    <script type='text/javascript' src='../lib/jquery-1.6.2.min.js'></script>
+    <script type='text/javascript' src='../lib/en.js'></script>
+    <script type='text/javascript'>
+    <!--
+        $(function(){
+            $('body').append('<canvas id="canvas" width="200" height="200" />');
+            var en = $.en($('canvas')[0], { type : 'stroke' });
+            var small_en = $.en($('canvas')[0], { x : 25, y : 25, radius : 10, type : 'stroke' });
+            small_en.on_rail(en);
+            $('body').append('<p><button id="move">move</button></p>');
+            $('body').append('<p><div id="log" /></p>');
+            $('#move').click(function(e){
+                small_en.animate(100, 100, 3000, function(){ $('#log').text('finished'); });
+                en.animate(80, 100, 5000, function(){ $('#log').text('finished'); });
+            });
+        }); 
+    //-->
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
