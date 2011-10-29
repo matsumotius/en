@@ -14,7 +14,8 @@
             var en = $('#canvas').en({ type : 'stroke' });
             en.on('click', function(e){ log('click'); });
             en.on('dblclick', function(e){ log('dbclick'); });
-            en.on('mouseup', function(e){ log('mouseup'); });
+            en.on('mouseup', function(e){ log('mouse up'); });
+            en.on('mousedown', function(e){ log('mouse down'); });
             en.on('mousemove', function(e){ log('mouse move'); });
             en.on('mouseover', function(e){ log('mouse over'); });
         }); 
