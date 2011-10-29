@@ -10,8 +10,13 @@
         $(function(){
             $('body').append('<canvas id="canvas" width="200" height="200" />');
             $('body').append('<p><div id="log" /></p>');
+            var log = function(message){ $('#log').text(message); };
             var en = $('#canvas').en({ type : 'stroke' });
-            en.on('click', function(e){ alert('clicked'); });
+            en.on('click', function(e){ log('click'); });
+            en.on('dblclick', function(e){ log('dbclick'); });
+            en.on('mouseup', function(e){ log('mouseup'); });
+            en.on('mousemove', function(e){ log('mouse move'); });
+            en.on('mouseover', function(e){ log('mouse over'); });
         }); 
     //-->
     </script>
