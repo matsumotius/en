@@ -9,7 +9,7 @@
     <!--
         $(function(){
             $('body').append('<canvas id="canvas" width="200" height="200" />');
-            var en = $.en($('canvas')[0], { color : '#cccccc' });
+            var en = $('#canvas').en({ color : '#cccccc' });
             $('body').append('<p><button id="fill">fill</button></p>');
             $('#fill').click(function(e){
                 en.fill('#FBDADE');

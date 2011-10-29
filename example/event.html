@@ -2,21 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>en / example / animate</title>
+    <title>en / example / event</title>
     <script type='text/javascript' src='../lib/jquery-1.6.2.min.js'></script>
     <script type='text/javascript' src='../lib/en.js'></script>
     <script type='text/javascript'>
     <!--
         $(function(){
             $('body').append('<canvas id="canvas" width="200" height="200" />');
-            var en = $('#canvas').en({ type : 'stroke' });
-            var small_en = $('#canvas').en({ radius : 10, type : 'stroke' });
-            $('body').append('<p><button id="animate">animate</button></p>');
             $('body').append('<p><div id="log" /></p>');
-            $('#animate').click(function(e){
-                en.animate(100, 100, 3000);
-                small_en.animate(100, 100, 5000, function(){ $('#log').text('finished'); });
-            });
+            var en = $('#canvas').en({ type : 'stroke' });
+            en.on('click', function(e){ alert('clicked'); });
         }); 
     //-->
     </script>
