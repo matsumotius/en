@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>en / example / touch</title>
+    <script type='text/javascript' src='../lib/jquery-1.6.2.min.js'></script>
+    <script type='text/javascript' src='../lib/en.js'></script>
+    <script type='text/javascript'>
+    <!--
+        $(function(){
+            $('body').append('<canvas id="canvas" width="200" height="200" />');
+            $('body').append('<p><div id="log" /></p>');
+            var log = function(message){ $('#log').text(message); };
+            var en = $('#canvas').en({ type : 'stroke' });
+            en.on('touchstart', function(e){ log('touch start'); });
+            en.on('touchmove', function(e){ log('touch move'); });
+            en.on('touchend', function(e){ log('touch end'); });
+        }); 
+    //-->
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
