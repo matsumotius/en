@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>en / example / image</title>
+    <script type='text/javascript' src='../lib/jquery-1.6.2.min.js'></script>
+    <script type='text/javascript' src='../lib/en.js'></script>
+    <script type='text/javascript'>
+    <!--
+        $(function(){
+            $('body').append('<canvas id="canvas" width="200" height="200" />');
+            var en = $('#canvas').en({ type : 'stroke' });
+            var small_en = $('#canvas').en({ radius : 10, type : 'stroke' });
+            $('body').append('<p><button id="image">set image</button></p>');
+            $('body').append('<p><button id="move">move</button></p>');
+            $('#image').click(function(e){
+                small_en.set_image('./image/sound.png', 10, 10);
+                en.set_image('./image/videos.png', 50, 50);
+            });
+            $('#move').click(function(e){
+                small_en.move(100, 100);
+            });
+        }); 
+    //-->
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+

@@ -1,6 +1,9 @@
 # en
 円(en) is a jQuery plugin only to operate circles on canvas.
 
+## thanks
+using TOKEN(http://brsev.com/) icon set for example.
+
 ## License
 
 (The MIT License)
