@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>en / example / layer</title>
+    <script type='text/javascript' src='../lib/jquery-1.6.2.min.js'></script>
+    <script type='text/javascript' src='../lib/en.js'></script>
+    <script type='text/javascript'>
+    <!--
+        $(function(){
+            $('body').append('<p>a > b</p>');
+            $('body').append('<canvas id="canvas" width="200" height="200" />');
+            $('body').append('<p><div id="log" /></p>');
+            var log = function(message){ $('#log').text(message); };
+            var a_en = $('#canvas').en({ x : 50, y : 50, type : 'fill', color : 'gray', layer : 2 });
+            var b_en = $('#canvas').en({ x : 100, y : 100, type : 'fill', color : 'yellow' });
+            a_en.on('click', function(e){ log('a touch start'); });
+            b_en.on('click', function(e){ log('b touch start'); });
+        }); 
+    //-->
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
