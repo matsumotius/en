@@ -14,7 +14,8 @@
         $('body').append('<p><button id="move">move</button></p>');
         $('#pie').click(function(e){
           en.to_pie(3);
-          en.fill_pie(0, 'yellow');
+          en.set_pie_color(0, 'yellow');
+          en.fill_pie();
         });
         $('#move').click(function(e){
           en.move(200, 200);
