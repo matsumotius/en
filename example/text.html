@@ -14,8 +14,8 @@
             $('body').append('<p><button id="text">set text</button></p>');
             $('body').append('<p><button id="move">move</button></p>');
             $('#text').click(function(e){
-                small_en.set_text('hi!', -5, -3);
-                en.set_text('hello!', 10, 10, '30px Arial');
+                small_en.set_text({ value : 'hi!', x : -5, y : -3 });
+                en.set_text({ value : 'hello!', x : 10, y : 10, font : '30px Arial', color : 'orange' });
             });
             $('#move').click(function(e){
                 small_en.move(100, 100);
