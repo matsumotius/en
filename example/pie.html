@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>en / example / pie</title>
+    <script type='text/javascript' src='../lib/jquery-1.6.4.min.js'></script>
+    <script type='text/javascript' src='../lib/en.js'></script>
+    <script type='text/javascript'>
+    <!--
+      $(function(){
+        $('body').append('<canvas id="canvas" width="300" height="300" />');
+        var en = $('#canvas').en({ x :150, y : 150, radius : 50, color : '#cccccc' });
+        $('body').append('<p><button id="pie">pie</button></p>');
+        $('body').append('<p><button id="move">move</button></p>');
+        $('#pie').click(function(e){
+          en.to_pie(3);
+          en.fill_pie(0, 'yellow');
+        });
+        $('#move').click(function(e){
+          en.move(200, 200);
+        });
+      }); 
+    //-->
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
